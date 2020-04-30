@@ -2,8 +2,8 @@ import React from 'react';
 import Step from "./Step/Step";
 
 function Steps(props) {
-    const { steps } = props;
-    const currentStep = (steps.find(step =>  step.status === "current" ))
+    const { steps, currentStep } = props;
+    // const currentStep = (steps.find(step =>  step.status === "current" ))
     return (
         <div className="steps">
             <div className="steps_icons">
@@ -15,7 +15,7 @@ function Steps(props) {
                 })}
             </div>
             <div className="steps_text">
-                <span>Complete</span> {currentStep.id}<span>steps of </span> {steps.length}
+                <span>Complete</span> {currentStep}<span>steps of </span> {steps.length}
             </div>
         </div>
     );

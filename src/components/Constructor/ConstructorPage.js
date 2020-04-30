@@ -29,18 +29,18 @@ function ConstructorPage() {
 
 
     const [steps, setSteps] = useState([
-        {id:1, status: 'completed'},
-        {id:2, status: 'completed'},
-        {id:3, status: 'current'},
+        {id:1, status: 'current'},
+        {id:2, status: 'uncompleted'},
+        {id:3, status: 'uncompleted'},
         {id: 4, status:'uncompleted'},
     ])
     const [hasNext, setHasNext] = useState(true);
-    const [hasPrev, setHasPrev] = useState(true);
-    const currentStep = (steps.find(step =>  step.status === "current" ));
-    const idxCurrentStep = steps.indexOf(currentStep);
+    const [hasPrev, setHasPrev] = useState(false);
+    const [currentStep, setCurrentStep] = useState(
+        steps.indexOf(steps.find(step =>  step.status === "current" ))+1
+    );
 
-
-    const completeStep = () => {
+    const handleStep = () => {
         const uncompletedStep = steps.find(step => step.status === 'uncompleted');
         if(uncompletedStep !== undefined) {
             setSteps(steps.map(step=> {
@@ -52,6 +52,21 @@ function ConstructorPage() {
                 }
                 return step;
             }));
+        }
+        const currentStep = (steps.find(step =>  step.status === "current" ));
+        const idxCurrentStep = steps.indexOf(currentStep);
+        setCurrentStep(idxCurrentStep +1)
+        if(idxCurrentStep === steps.length - 1 ) {
+            setHasNext(false);
+        }
+        else {
+            setHasNext(true)
+        }
+        if(idxCurrentStep === 0) {
+            setHasPrev(false);
+        }
+        else {
+            setHasPrev(true);
         }
     }
 
@@ -78,14 +93,14 @@ function ConstructorPage() {
                         <LiveView hideProduct={hasNext}/>
                     </div>
                     <div className="constructor_main_section">
-                        <Steps steps={steps}/>
+                        <Steps currentStep={currentStep} steps={steps}/>
                         <Distance/>
                         <TypesConnection/>
                         <div className="constructor_nextstep">
-                            <StyledButton label="NEXT STEP" color="primary" onHandle={completeStep}/>
+                            <StyledButton label="NEXT STEP" color="primary" onHandle={handleStep}/>
                         </div>
                     </div>
-                    <Navigation setHasNext={setHasNext} setHasPrev={setHasPrev} steps={steps}/>
+                    <Navigation hasNext={hasNext} hasPrev={hasPrev} steps={steps}/>
                 </div>
             </div>
 

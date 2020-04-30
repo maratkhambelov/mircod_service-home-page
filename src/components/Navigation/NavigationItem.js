@@ -8,7 +8,7 @@ const NavigationItem = (props) => {
     return (
         <div className={`constructor_navigation_item nav_${namePointer} ${hasSibling ? '_active' : ''}`}
              onClick={()=> {
-                 console.log('next')
+                 console.log(namePointer)
              }}>
             <IconSimple {...icon}/>
         </div>
