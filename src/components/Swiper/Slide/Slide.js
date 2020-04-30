@@ -1,14 +1,26 @@
 import React, {useState} from 'react';
-import onClick from "swiper/src/components/core/events/onClick";
+import './Slide.scss';
+import StyledFab from "../../StyledFab/StyledFab";
 
 function Slide(props) {
-    const {id, img, onChoose } = props;
+    const {id, img, onChoose, active, name } = props;
+    // console.log(props);
+    let classNameSlide = 'swiper-slide '
+    if(active === true) {
+        classNameSlide += ' _active'
+    }
     return (
-        <div className="swiper-slide"
+        <div className={classNameSlide}
         onClick={()=> {
             onChoose(id)
         }}>
-            slide {id}
+            <StyledFab>
+                {props.children}
+            </StyledFab>
+            {/*<div className="swiper-slide_circle">*/}
+            {/*</div>*/}
+            <div className="swiper-slide_name">{name}</div>
+
         </div>
     );
 }

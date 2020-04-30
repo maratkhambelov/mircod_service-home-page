@@ -1,15 +1,19 @@
 import React, {useState} from 'react';
 import TypesConnectionItem from "./TypesConnectionItem/TypesConnectionItem";
 import './TypesConnection.css';
+import  gratis from '../../assets/gratis.png';
+import  xbee from '../../assets/xbee_black.png';
+import  mbus from '../../assets/mbus.png';
+
 
 function TypesConnection(props) {
     const [types, setTypes] = useState([
-        {id:1, img: '', active: false},
-        {id:2, img: '', active: false},
-        {id:3, img: '', active: false},
-        {id:4, img: '', active: false},
-        {id:5, img: '', active: false},
-        {id:6, img: '', active: false},
+        {id:1, img: xbee, active: false},
+        {id:2, img: gratis, active: false},
+        {id:3, img: mbus, active: false},
+        {id:4, img: xbee, active: false},
+        {id:5, img: gratis, active: false},
+        {id:6, img: mbus, active: false},
     ])
 
     const chooseType = (id) => {

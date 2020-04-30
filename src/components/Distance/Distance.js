@@ -6,7 +6,6 @@ function Distance(props) {
 
     const handleDistance = (value) => {
         setDistance(value)
-        console.log(distance)
     }
     return (
         <div className="distance">

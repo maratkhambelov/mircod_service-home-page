@@ -1,0 +1,35 @@
+.footer {
+  background-color: #2a2a2b;
+  &_inner {
+    max-width: 1170px;
+    margin: 0 auto;
+    //display: grid;
+    //grid-template-columns: repeat(12, 1fr);
+    display: flex;
+  }
+}
+.footer_main {
+  &_section {
+
+  }
+}
+.footer_additional {
+
+}
+.footer_title {
+  font-family: ProximaNova;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #eeeeee;
+}
+.footer_subtext{
+  font-family: ProximaNova;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: normal;
+  color: #90a4ae;
+}

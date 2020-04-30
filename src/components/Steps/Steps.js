@@ -2,19 +2,20 @@ import React from 'react';
 import Step from "./Step/Step";
 
 function Steps(props) {
-    const { data, stepsMaxLength } = props;
-    const currentStep = (data.find(step =>  step.status === "current" ))
+    const { steps } = props;
+    const currentStep = (steps.find(step =>  step.status === "current" ))
     return (
         <div className="steps">
             <div className="steps_icons">
-                {data.map(item => {
-                    return <Step key={item.id} {...item} />
+                {steps.map(item => {
+                    return (
+                        <Step key={item.id} {...item} >
+                        </Step>
+                    )
                 })}
-
             </div>
             <div className="steps_text">
-                <span>Complete</span> {currentStep.id} <span>steps of </span> {stepsMaxLength}
-
+                <span>Complete</span> {currentStep.id}<span>steps of </span> {steps.length}
             </div>
         </div>
     );

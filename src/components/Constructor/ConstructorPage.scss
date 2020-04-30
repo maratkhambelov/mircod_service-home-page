@@ -1,0 +1,26 @@
+.constructor {
+
+}
+.constructor_inner {
+    max-width: 1170px;
+    margin: 0 auto;
+    //display: grid;
+    //grid-template-columns: repeat(12, 1fr);
+    //.constructor_swiper {
+    //    grid-row: 1;
+    //    grid-column: 1 / 13;
+    //}
+    //.constructor_main {
+    //    grid-row: 2;
+    //    grid-column: 1 / 13;
+    //}
+}
+.constructor_main{
+    display: flex;
+}
+.constructor_main_section {
+    display: flex;
+}
+.constructor_main_section._with-bg {
+    background-color: orangered;
+}

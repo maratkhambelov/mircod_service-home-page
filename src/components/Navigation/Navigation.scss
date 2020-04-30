@@ -1,0 +1,10 @@
+.constructor_navigation {
+
+  &_item {
+    background-color: #cbcbcb;
+    border-radius: 0 12px 12px 0;
+    &._active {
+      background-image: linear-gradient(to top, #ff6a19, #f15619);
+    }
+  }
+}

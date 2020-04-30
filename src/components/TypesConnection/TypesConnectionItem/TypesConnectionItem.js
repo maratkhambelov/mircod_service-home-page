@@ -1,8 +1,7 @@
 import React from 'react';
 import './TypesConnectionItem.css';
-
 function TypesConnectionItem(props) {
-    const {chooseType, id, active} = props;
+    const {chooseType, id, active, img} = props;
     let classNameType = 'types-connection_item ';
     if(active) {
         classNameType += ' _active'
@@ -10,7 +9,7 @@ function TypesConnectionItem(props) {
     return (
         <div className={classNameType}
         onClick={() => chooseType(id)}>
-            {id}
+            <img src={img} width={70} height={30}/>
         </div>
     );
 }
