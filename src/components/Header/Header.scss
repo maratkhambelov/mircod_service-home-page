@@ -1,0 +1,40 @@
+.header {
+  padding: 30px 0;
+
+}
+.header_inner {
+  display: flex;
+  max-width: 1170px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+
+}
+.header_logo{
+  display: flex;
+  align-items:center;
+}
+.header_logo_extra-title {
+  font-family: Lato;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 8px;
+  letter-spacing: normal;
+  color: #6d6d6d;
+  margin-left: 8px;
+}
+.header_login {
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  //text-align: left;
+  color: #2a2a2b;
+  line-height:14px;
+  display:flex;
+  align-items: center;
+}

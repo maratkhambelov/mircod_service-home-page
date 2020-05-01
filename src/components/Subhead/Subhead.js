@@ -1,45 +1,35 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link } from "react-router-dom";
-import './Subhead.css';
-function Subhead() {
+import './Subhead.scss';
+import IconSimple from "../Icon";
+const Subhead = (props) =>{
+    const iconHeart = {fill: '#F45A19', viewBox:"0 0 19 17", height:"19", width:"17", d: 'M17.653 1.371c-.897-.915-2.138-1.372-3.721-1.372-.438 0-.886.079-1.342.238-.455.158-.88.372-1.272.642-.392.269-.729.522-1.012.758-.283.236-.552.487-.806.753-.255-.266-.523-.517-.806-.753-.283-.236-.62-.489-1.012-.758-.393-.27-.817-.484-1.273-.642-.456-.159-.903-.238-1.341-.238-1.583 0-2.824.457-3.721 1.372C.449 2.287 0 3.556 0 5.179c0 .495.083 1.004.249 1.528.166.524.355.97.567 1.339.212.369.453.729.721 1.079.269.351.465.592.589.725.124.133.221.229.291.288l6.616 6.664c.128.133.283.199.467.199.184 0 .339-.066.467-.199l6.605-6.642C18.191 8.47 19 6.81 19 5.179c0-1.624-.449-2.893-1.347-3.808zM15.649 9.12L9.5 15.307 3.34 9.109c-1.322-1.38-1.983-2.69-1.983-3.93 0-.598.076-1.125.228-1.583.152-.457.347-.821.583-1.09.237-.27.525-.489.864-.659.34-.169.672-.284.997-.343.325-.059.672-.088 1.039-.088.368 0 .764.094 1.188.282.424.188.814.424 1.171.708.357.285.663.55.917.797.255.248.467.474.636.681.128.163.301.244.52.244.219 0 .392-.081.52-.244.169-.207.381-.433.636-.681.254-.247.56-.512.917-.797.357-.284.747-.52 1.172-.708.423-.188.819-.282 1.187-.282.368 0 .714.029 1.039.088.325.059.657.174.997.343.339.17.627.39.864.659s.431.633.583 1.09c.152.458.228.985.228 1.583 0 1.24-.665 2.553-1.994 3.941z'}
+    const iconSearch = {fill: '#F85F19', viewBox:"0 0 17 17", height:"17", width:"17", d: 'M11.347 1.938c-2.594-2.594-6.816-2.594-9.41 0-2.593 2.595-2.593 6.815 0 9.409 2.31 2.31 5.908 2.557 8.5.754.055.258.18.504.38.705l3.778 3.776c.55.55 1.439.55 1.988 0 .549-.549.549-1.438 0-1.987l-3.778-3.778c-.2-.2-.447-.325-.705-.379 1.805-2.593 1.557-6.189-.753-8.5zm-1.193 8.217c-1.936 1.936-5.087 1.936-7.024 0-1.935-1.937-1.935-5.087 0-7.024 1.937-1.936 5.088-1.936 7.024 0 1.937 1.937 1.937 5.087 0 7.024z'}
+    const {links, handleLink} = props;
+    useEffect(()=>{
+
+    })
     return (
         <div className="subhead">
             <div className="subhead_inner">
                 <div className="subhead_links">
-                    <div className="subhead_link">
-                        <Link to="/constructor">
-                            constructor
+                    {links.map(item => (
+                        <Link to={item.link}
+                              key={item.id}
+                              className={`subhead_link ${item.active ? '_active' : ''}`}
+                              onClick={() => {handleLink(item.id)}}
+                        >
+                            {item.title}
                         </Link>
-                    </div>
-                    <div className="subhead_link">
-                        <Link to="/help">
-                            help
-                        </Link>
-                    </div>
-                    <div className="subhead_link">
-                        <Link to="/users_panel">
-                            users panel
-                        </Link>
-                    </div>
-                    <div className="subhead_link">
-                        <Link to="/faq">
-                            faq
-                        </Link>
-                    </div>
-                    <div className="subhead_link">
-                        <Link to="/about">
-                            about
-                        </Link>
-                    </div>
-                    <div className="subhead_link">
-                        <Link to="/blog">
-                            blog
-                        </Link>
-                    </div>
+                    ))}
                 </div>
                 <div className="subhead_quick-links">
-                    <div className="subhead_favourite"></div>
-                    <div className="subhead_search"></div>
+                    <div className="subhead_quick-links_item">
+                        <IconSimple {...iconHeart} />
+                    </div>
+                    <div className="subhead_quick-links_item">
+                        <IconSimple  {...iconSearch} />
+                    </div>
                 </div>
             </div>
 

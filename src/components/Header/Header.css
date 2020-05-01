@@ -1,9 +1,0 @@
-.header {
-    padding: 30px 0;
-}
-.header_inner {
-    display: flex;
-    max-width: 1170px;
-    margin: 0 auto;
-    justify-content: space-between;
-}
