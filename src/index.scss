@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "ProximaNova";
+  src: url("../src/assets/fonts/ProximaNova-Regular.woff") format('woff'),
+    url("../src/assets/fonts/ProximaNova-Regular.eot?#iefix") format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ProximaNova-Extrabld";
+  src: url("../src/assets/fonts/ProximaNova-Extrabld.woff") format('woff'),
+  url("../src/assets/fonts/ProximaNova-Extrabld.eot?#iefix") format('embedded-opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'ProximaNova';
+  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+  }
+}
+
+code {
+  /*font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',*/
+  /*  monospace;*/
+}

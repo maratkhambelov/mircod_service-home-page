@@ -1,10 +1,21 @@
 .constructor_navigation {
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   &_item {
     background-color: #cbcbcb;
     border-radius: 0 12px 12px 0;
+    padding: 23px 20px 23px 30px;
+
+    &:hover{
+      cursor: pointer;
+    }
     &._active {
       background-image: linear-gradient(to top, #ff6a19, #f15619);
     }
   }
+}
+.constructor_navigation_item + .constructor_navigation_item {
+  margin-top: 13px;
 }

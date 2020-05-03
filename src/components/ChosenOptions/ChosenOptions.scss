@@ -1,0 +1,23 @@
+.chosen-options {
+  //padding: 0 35px 0 32px;
+  //box-shadow: 5px 0px 9px 2px rgba(0,0,0,0.3), 5px 0 9px 2px #ec401f;
+  //background-image: linear-gradient( rgba(255,96,41,1) 50%, rgba(236,64,31,1) 50%);
+
+  -webkit-box-shadow: 22px 0px 13px 1px rgba(214,75,54,1);
+  -moz-box-shadow: 22px 0px 13px 1px rgba(214,75,54,1);
+  box-shadow: 22px 0px 13px 1px rgba(143,43,26,0.07);
+  padding: 35px 20px 40px 20px;
+  margin-right: 20px;
+  border-radius: 7px;
+  &_title {
+    font-family: ProximaNova;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    line-height: 14px;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+}

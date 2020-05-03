@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import Slider from '@material-ui/core/Slider';
+import './Slider.scss';
 
-function StyledSlider(props) {
+const StyledSlider = (props) =>  {
     const { handleDistance } = props;
 
     function valuetext(value) {
@@ -12,6 +13,9 @@ function StyledSlider(props) {
         {
             value: 0,
             label: '0m',
+            style:{
+                left: '1.5%'
+            }
         },
         {
             value: 50,

@@ -1,0 +1,71 @@
+.distance{
+  margin-bottom: 40px;
+
+  ._with-color{
+    color: #f75f19;
+  }
+  &_title{
+    font-family: ProximaNova;
+    font-size: 28px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 28px;
+    letter-spacing: normal;
+    color: #2a2a2b;
+    margin-bottom: 65px;
+  }
+  &_slider {
+    &_additional{
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 14px;
+
+    }
+    &_choose {
+      font-family: ProximaNova;
+      font-size: 16px;
+      font-weight: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #2a2a2b;
+      flex-grow:1;
+
+      align-self: center;
+      line-height: 16px;
+
+    }
+    &_current{
+      font-family: ProximaNova;
+      font-size: 10px;
+      font-weight: normal;
+      font-style: normal;
+      line-height: 9px;
+      letter-spacing: -0.25px;
+      color: #202020;
+      margin-right: 24px;
+
+      align-self: flex-end;
+    }
+    &_value{
+      font-family: ProximaNova-Extrabld;
+      font-size: 36px;
+      font-weight: 900;
+      font-style: normal;
+      line-height:25px;
+      letter-spacing: -0.9px;
+      color: #2a2a2b;
+      min-width: 35px;
+      text-align: end;
+    }
+    &_measure{
+      font-family: ProximaNova-Extrabld;
+      font-size: 23px;
+      font-weight: normal;
+      letter-spacing: -0.58px;
+      color: #f4511e;
+      line-height: 23px;
+      align-self: flex-end;
+    }
+  }
+}

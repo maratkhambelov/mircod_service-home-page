@@ -88,16 +88,20 @@ function ConstructorPage() {
                     <StyledSwiper data={items} chooseItem={chooseItem}/>
                 </div>
                 <div className="constructor_main">
-                    <div className="constructor_main_section _with-bg">
-                        <ChosenOptions data={items} />
-                        <LiveView hideProduct={hasNext}/>
+                    <div className="constructor_product">
+                        <div className="constructor_product_inner">
+                            <ChosenOptions data={items} />
+                            <LiveView hideProduct={hasNext}/>
+                        </div>
                     </div>
-                    <div className="constructor_main_section">
-                        <Steps currentStep={currentStep} steps={steps}/>
-                        <Distance/>
-                        <TypesConnection/>
-                        <div className="constructor_nextstep">
-                            <StyledButton label="NEXT STEP" color="primary" onHandle={handleStep}/>
+                    <div className="constructor_params">
+                        <div className="constructor_params_inner">
+                            <Steps currentStep={currentStep} steps={steps}/>
+                            <Distance/>
+                            <TypesConnection/>
+                            <div className="constructor_nextstep">
+                                <StyledButton label="NEXT STEP" color="primary" onHandle={handleStep}/>
+                            </div>
                         </div>
                     </div>
                     <Navigation hasNext={hasNext} hasPrev={hasPrev} steps={steps}/>

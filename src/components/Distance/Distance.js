@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import StyledSlider from "../Slider/Slider";
+import './Distance.scss';
 
 function Distance(props) {
     const [distance, setDistance] = useState(0);
@@ -9,18 +10,16 @@ function Distance(props) {
     }
     return (
         <div className="distance">
-            <div className="distance_subtitle">
-
-            </div>
             <div className="distance_title">
-
+                TRANSMISSION
+                <div className="_with-color">DISTANCE</div>
             </div>
             <div className="distance_slider">
-                <div>
-                    <span style={{fontSize: '14px'}}>CHOOSE DISTANCE</span>
-                    <span style={{fontSize: '9px'}}>CURRENT DISTANCE</span>
-                    <span>{distance}</span>
-                    <span>m</span>
+                <div className="distance_slider_additional">
+                    <span className="distance_slider_choose">CHOOSE <span className="_with-color">DISTANCE</span></span>
+                    <span className="distance_slider_current">CURRENT<br/> DISTANCE</span>
+                    <span className="distance_slider_value">{distance}</span>
+                    <span className="distance_slider_measure _with-color">m</span>
                 </div>
                 <StyledSlider handleDistance={handleDistance}/>
             </div>

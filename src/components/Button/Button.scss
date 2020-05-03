@@ -1,0 +1,27 @@
+.MuiButtonBase-root.MuiButton-root {
+    padding: 17px 46px;
+    border-radius: 30px;
+    flex-shrink:0;
+
+    .MuiButton-label{
+        font-family: ProximaNova;
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 10px;
+        letter-spacing: normal;
+    }
+    &.MuiButton-textPrimary {
+        background-color: #f14921;
+        .MuiButton-label {
+            color: #ffffff;
+        }
+
+    }
+    &.MuiButton-outlined {
+        border-color: #ffffff;
+        .MuiButton-label{
+            color: #ffffff;
+        }
+    }
+}

@@ -1,7 +1,8 @@
 import React from 'react';
 import ChosenOptionsItem from "./ChosenOptionsItem";
 import Icon from "@material-ui/core/Icon";
-import IconSimple from "../Icon";
+import './ChosenOptions.scss';
+
 function ChosenOptions(props) {
     const { data } = props;
     // const icons = [
@@ -12,13 +13,14 @@ function ChosenOptions(props) {
     // ]
     return (
         <div className="chosen-options">
-            <div className="chosen-options_title">chosen options:</div>
+            <div className="chosen-options_title">
+                chosen <b>options:</b>
+            </div>
             {data.map(item => {
                 if(item.active === true) {
                     return(
                         <ChosenOptionsItem key={item.id} {...item} >
-                                {/*<IconSimple d={item.d}/>*/}
-                            {/*<img alt='' src='../../assets/icons/1.svg'/>*/}
+
                             <Icon component={item.img}/>
                         </ChosenOptionsItem>
                     )

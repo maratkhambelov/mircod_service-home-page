@@ -1,7 +1,9 @@
 import React from 'react';
 import Step from "./Step/Step";
+import './Steps.scss';
 
-function Steps(props) {
+
+const Steps = (props) =>{
     const { steps, currentStep } = props;
     // const currentStep = (steps.find(step =>  step.status === "current" ))
     return (
@@ -15,7 +17,7 @@ function Steps(props) {
                 })}
             </div>
             <div className="steps_text">
-                <span>Complete</span> {currentStep}<span>steps of </span> {steps.length}
+                <span>Complete</span> {currentStep} <span> steps of </span> {steps.length}
             </div>
         </div>
     );
