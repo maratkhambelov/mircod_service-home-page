@@ -1,0 +1,44 @@
+.modal-window {
+    position: fixed;
+    top: 0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    margin: 100px auto;
+    width: 700px;
+    z-index: 1;
+    padding: 25px 35px;
+    border-radius: 10px;
+    &_headline {
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 60px;
+        .modal-window_title{
+            font-family: ProximaNova-Extrabld;
+            font-size: 28px;
+            font-weight: bold;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            flex-grow: 1;
+            text-align: center;
+        }
+        .modal-window_close{
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    &_content{
+        font-family: ProximaNova;
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.35px;
+
+    }
+}

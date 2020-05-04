@@ -1,10 +1,7 @@
-import React, {useState} from 'react';
-import './Slide.scss';
-import StyledFab from "../../StyledFab/StyledFab";
+import React from 'react';
 
 function Slide(props) {
-    const {id, img, onChoose, active, name } = props;
-    // console.log(props);
+    const {id, onChoose, active, name } = props;
     let classNameSlide = 'swiper-slide '
     if(active === true) {
         classNameSlide += ' _active'
@@ -14,11 +11,10 @@ function Slide(props) {
         onClick={()=> {
             onChoose(id)
         }}>
-            <StyledFab>
+            <div className="swiper-slide_icon">
                 {props.children}
-            </StyledFab>
-            {/*<div className="swiper-slide_circle">*/}
-            {/*</div>*/}
+            </div>
+
             <div className="swiper-slide_name">{name}</div>
 
         </div>

@@ -1,11 +1,17 @@
 import React, {useContext} from 'react';
-import './ModalWindow.css';
+import './ModalWindow.scss';
 import {Context} from "../App/App";
+import {Close} from "@material-ui/icons";
 
 function ModalWindow (props) {
-    // const { data } = props;
     const [isOpened, setIsOpened] = useContext(Context);
-
+    const lorem = (
+        <span>
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum obcaecati officia
+                            repudiandae. Alias aut blanditiis eius nesciunt vero vitae. Ex illo magnam nam
+                            necessitatibus pariatur perspiciatis praesentium reiciendis repellat! Et?
+        </span>
+    )
     const handleClose = () => {
         setIsOpened(false);
     }
@@ -21,11 +27,11 @@ function ModalWindow (props) {
                             className="modal-window_close"
                             onClick={() => {handleClose() }}
                         >
-                            X
+                            <Close/>
                         </div>
                     </div>
                     <div className="modal-window_content">
-                        Something
+                        {props.children ? (props.children) : (lorem)}
                     </div>
                 </div>
             )}

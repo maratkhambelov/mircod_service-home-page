@@ -2,6 +2,15 @@
   background-color: #2a2a2b;
   padding-top: 150px;
   padding-bottom: 90px;
+  position: relative;
+  &:after{
+    content: '';
+    position: absolute;
+    bottom: 136px;
+    width: 100%;
+    height: 1px;
+    background-color: #546e7a;
+  }
   &_inner {
     max-width: 1170px;
     margin: 0 auto;
@@ -39,6 +48,7 @@
 
           }
           li{
+            padding-bottom: 4px;
             &:before{
               content: '-';
             }
@@ -59,7 +69,7 @@
     }
   }
   &_additional {
-    border-top: 1px solid #546e7a;
+    //border-top: 1px solid #546e7a;
     padding-top: 28px;
     display: flex;
     justify-content: space-between;

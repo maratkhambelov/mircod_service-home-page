@@ -11,14 +11,15 @@ const StyledSwiper = (props) => {
 
 
     const params = {
-        // centeredSlides: true,
-        slidesPerView: 10,
-        spaceBetween: 20,
+        centeredSlides: true,
+        slidesPerView: 11,
+        spaceBetween: 15,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
         },
-        // spaceBetween: 30
+        // renderPrevButton: () => <NavigateBefore></NavigateBefore>,
+
     }
     return(
         <Swiper {...params}>
@@ -29,6 +30,7 @@ const StyledSwiper = (props) => {
                     </Slide>
                     )
             })}
+
             <SlideAddCustom/>
         </Swiper>
     )

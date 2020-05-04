@@ -1,51 +1,66 @@
 .live-view{
   padding: 35px 0 40px 0;
   margin-right: 35px;
-  &_section{
-
-    &.live-view_headline {
-      display: flex;
-      margin-bottom: 44px;
-      white-space: nowrap;
-      .live-view_title{
-        font-family: ProximaNova;
-        font-size: 20px;
-        font-weight: bold;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 20px;
-        letter-spacing: -0.5px;
-        color: #ffffff;
-        text-transform: uppercase;
-        margin-right: 40px;
-      }
-    }
-    &.live-view_description {
-      margin-right:120px;
-      margin-bottom: 35px;
-      @media (min-width: 1920px) {
-        margin-right: 190px;
-        
-      }
-    }
-    .live-view_text {
+  position: relative;
+  &_headline {
+    display: flex;
+    margin-bottom: 44px;
+    white-space: nowrap;
+    .live-view_name{
       font-family: ProximaNova;
-      font-size: 14px;
+      font-size: 20px;
       font-weight: bold;
+      font-stretch: normal;
       font-style: normal;
-      line-height: 14px;
-      letter-spacing: -0.35px;
+      line-height: 20px;
+      letter-spacing: -0.5px;
       color: #ffffff;
-      margin-bottom: 20px;
-    }
-    .live-view_subtext{
-      font-family: ProximaNova;
-      font-size: 14px;
-      font-weight: normal;
-      font-style: normal;
-      line-height: 14px;
-      letter-spacing: -0.35px;
-      color: #ffffff;
+      text-transform: uppercase;
+      margin-right: 40px;
     }
   }
+  &_description {
+    margin-right:120px;
+    margin-bottom: 35px;
+    @media (min-width: 1920px) {
+      margin-right: 190px;
+
+    }
+  }
+  &_image {
+
+  }
+  .live-view_text {
+    font-family: ProximaNova;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 14px;
+    letter-spacing: -0.35px;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  .live-view_subtext{
+    font-family: ProximaNova;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 14px;
+    letter-spacing: -0.35px;
+    color: #ffffff;
+  }
+  .live-view_title{
+    text-transform: uppercase;
+    font-family: ProximaNova;
+    font-size: 36.3px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 25px;
+    letter-spacing: normal;
+    color: #ffffff;
+    position: absolute;
+    bottom: 40px;
+  }
+
 }

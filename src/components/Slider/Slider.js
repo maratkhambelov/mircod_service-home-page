@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Slider from '@material-ui/core/Slider';
 import './Slider.scss';
+
 
 const StyledSlider = (props) =>  {
     const { handleDistance } = props;
@@ -13,15 +14,16 @@ const StyledSlider = (props) =>  {
         {
             value: 0,
             label: '0m',
-            style:{
-                left: '1.5%'
-            }
+
         },
         {
             value: 50,
             label: '50m',
         },
     ];
+
+
+
     return (
         <Slider
             getAriaValueText={valuetext}

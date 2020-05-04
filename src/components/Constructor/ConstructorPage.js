@@ -29,10 +29,10 @@ function ConstructorPage() {
 
 
     const [steps, setSteps] = useState([
-        {id:1, status: 'current'},
-        {id:2, status: 'uncompleted'},
-        {id:3, status: 'uncompleted'},
-        {id: 4, status:'uncompleted'},
+        {id:1, status: 'current', show: true},
+        {id:2, status: 'uncompleted', show: false},
+        {id:3, status: 'uncompleted', show: false},
+        {id: 4, status:'uncompleted', show: false},
     ])
     const [hasNext, setHasNext] = useState(true);
     const [hasPrev, setHasPrev] = useState(false);
@@ -40,6 +40,46 @@ function ConstructorPage() {
         steps.indexOf(steps.find(step =>  step.status === "current" ))+1
     );
 
+    const [shownStep, setShownStep] = useState(
+        steps.indexOf(steps.find(step =>  step.show === true ))
+    );
+
+    const toBackStep = () => {
+        // const idxShownStep = steps.indexOf(steps.find(item => item.show === true))
+        // setSteps(steps.map((step, idx) =>{
+        //         if(idx === idxShownStep) {
+        //             step.show = false;
+        //         }
+        //         return step;
+        //     }))
+        // setSteps([...steps, steps[idxShownStep].show = false]);
+        // setSteps([...steps, steps[idxShownStep-1].show = true]);
+        // console.log(steps);
+
+    }
+    const toNextStep = (id) => {
+
+        if(hasNext === true) {
+            setShownStep(shownStep+1);
+            setSteps(items.map(item => {
+                item.show = false;
+                if(item.id === id){
+                    item.show = !item.show
+                }
+                return item;
+            }))
+        }
+        console.log(steps);
+        // const idxShownStep = steps.indexOf(steps.find(item => item.show === true))
+        // if (idxShownStep !== steps.length - 1) {
+        //     setSteps(steps.map((step, idx) => {
+        //         if (idx === idxShownStep) {
+        //             step.show = false;
+        //         }
+        //         return step;
+        //     }))
+        // }
+    }
     const handleStep = () => {
         const uncompletedStep = steps.find(step => step.status === 'uncompleted');
         if(uncompletedStep !== undefined) {
@@ -104,7 +144,7 @@ function ConstructorPage() {
                             </div>
                         </div>
                     </div>
-                    <Navigation hasNext={hasNext} hasPrev={hasPrev} steps={steps}/>
+                    <Navigation toNextStep={toNextStep} toBackStep={toBackStep}  hasNext={hasNext} hasPrev={hasPrev} steps={steps}/>
                 </div>
             </div>
 

@@ -3,9 +3,9 @@ import './Navigation.scss';
 import NavigationItem from "./NavigationItem";
 
 const Navigation = (props) => {
-    const {steps, hasNext, setHasNext, hasPrev, setHasPrev} = props;
-    console.log(hasNext);
-    console.log(hasPrev);
+    const {steps, hasNext, setHasNext, hasPrev, setHasPrev, toBackStep, toNextStep} = props;
+    // console.log(hasNext);
+    // console.log(hasPrev);
     // const currentStep = (steps.find(step =>  step.status === "current" ))
     // const idxCurrentStep = steps.indexOf(currentStep);
     // setHasNext(idxCurrentStep === steps.length - 1 ? hasNext = true : hasNext = false)
@@ -22,8 +22,8 @@ const Navigation = (props) => {
 
     return (
         <div className="constructor_navigation">
-            <NavigationItem namePointer="next" hasSibling={hasNext} icon={iconNext}/>
-            <NavigationItem namePointer="prev" hasSibling={hasPrev} icon={iconPrev}/>
+            <NavigationItem namePointer="next" {...props}  handleStep={toNextStep}  hasSibling={hasNext} icon={iconNext}/>
+            <NavigationItem namePointer="prev" {...props} handleStep={toBackStep} hasSibling={hasPrev} icon={iconPrev}/>
         </div>
 
 

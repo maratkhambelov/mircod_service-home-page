@@ -20,4 +20,30 @@
     color: #ffffff;
     text-transform: uppercase;
   }
+  &_items{
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .chosen-options_item + .chosen-options_item {
+      margin-top: 20px;
+    }
+  }
+  &_item{
+
+    &_icon{
+      width: 53px;
+      height: 53px;
+      background-color: #f54f23;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.2);
+      svg{
+        fill: #ffffff;
+      }
+    }
+
+  }
 }

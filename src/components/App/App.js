@@ -7,6 +7,7 @@ import Subhead from "../Subhead/Subhead";
 import ModalWindow from "../ModalWindow/ModalWindow";
 import Footer from "../Footer/Footer";
 import HelpPage from "../HelpPage/HelpPage";
+import Cover from "../Cover/Cover";
 
 
 export const Context = createContext([{}, () => {}]);
@@ -40,6 +41,7 @@ function App() {
                     <div className="app_inner">
                         <Header/>
                         <Subhead links={links} handleLink={handleLink}/>
+                        <Cover/>
                         <Switch>
                             <Route path="/constructor" component={ConstructorPage} />
                             <Route path="/help/:stepId">

@@ -16,17 +16,19 @@ function ChosenOptions(props) {
             <div className="chosen-options_title">
                 chosen <b>options:</b>
             </div>
-            {data.map(item => {
-                if(item.active === true) {
-                    return(
-                        <ChosenOptionsItem key={item.id} {...item} >
+            <div className="chosen-options_items">
+                {data.map(item => {
+                    if(item.active === true) {
+                        return(
+                            <ChosenOptionsItem key={item.id} {...item} >
 
-                            <Icon component={item.img}/>
-                        </ChosenOptionsItem>
-                    )
+                                <Icon component={item.img}/>
+                            </ChosenOptionsItem>
+                        )
 
-                }
-            })}
+                    }
+                })}
+            </div>
         </div>
     );
 }

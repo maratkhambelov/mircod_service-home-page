@@ -1,10 +1,8 @@
 import React, {useContext} from 'react';
-import './Slide.scss';
 import {Context} from "../../App/App";
-import {Add} from "@material-ui/icons";
-import StyledFab from "../../StyledFab/StyledFab";
+import { Add} from "@material-ui/icons";
 
-const SlideAddCustom = (props) => {
+const SlideAddCustom = () => {
     const [isOpened, setIsOpened] = useContext(Context);
 
     const handleOpen = () => {
@@ -13,11 +11,9 @@ const SlideAddCustom = (props) => {
     return (
         <div className='swiper-slide_add-custom'
         onClick={() => {handleOpen() }}>
-            <StyledFab>
+            <div className="swiper-slide_icon">
                 <Add/>
-            </StyledFab>
-            {/*<div className="swiper-slide_circle">*/}
-            {/*</div>*/}
+            </div>
             <div className="swiper-slide_name">Add Custom</div>
         </div>
     );
