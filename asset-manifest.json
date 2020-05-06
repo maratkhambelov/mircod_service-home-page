@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/mircod_service-home-page/static/css/main.355cce67.chunk.css",
+    "main.js": "/mircod_service-home-page/static/js/main.3c0316e8.chunk.js",
+    "main.js.map": "/mircod_service-home-page/static/js/main.3c0316e8.chunk.js.map",
+    "runtime-main.js": "/mircod_service-home-page/static/js/runtime-main.3d1fdce5.js",
+    "runtime-main.js.map": "/mircod_service-home-page/static/js/runtime-main.3d1fdce5.js.map",
+    "static/css/2.508070a3.chunk.css": "/mircod_service-home-page/static/css/2.508070a3.chunk.css",
+    "static/js/2.8d28968e.chunk.js": "/mircod_service-home-page/static/js/2.8d28968e.chunk.js",
+    "static/js/2.8d28968e.chunk.js.map": "/mircod_service-home-page/static/js/2.8d28968e.chunk.js.map",
+    "index.html": "/mircod_service-home-page/index.html",
+    "precache-manifest.1fc21af8c3659f2dea4c1b14687a1c9f.js": "/mircod_service-home-page/precache-manifest.1fc21af8c3659f2dea4c1b14687a1c9f.js",
+    "service-worker.js": "/mircod_service-home-page/service-worker.js",
+    "static/css/2.508070a3.chunk.css.map": "/mircod_service-home-page/static/css/2.508070a3.chunk.css.map",
+    "static/css/main.355cce67.chunk.css.map": "/mircod_service-home-page/static/css/main.355cce67.chunk.css.map",
+    "static/js/2.8d28968e.chunk.js.LICENSE.txt": "/mircod_service-home-page/static/js/2.8d28968e.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/mircod_service-home-page/static/media/latoregular.1fbf86c9.woff",
+    "static/media/facebook.svg": "/mircod_service-home-page/static/media/facebook.3a6d6277.svg",
+    "static/media/header-logo.png": "/mircod_service-home-page/static/media/header-logo.379c0307.png",
+    "static/media/mastercard.png": "/mircod_service-home-page/static/media/mastercard.fe5fe57c.png",
+    "static/media/Cover.scss": "/mircod_service-home-page/static/media/micro-scheme.9aeb3380.png",
+    "static/media/product.png": "/mircod_service-home-page/static/media/product.8b499fcc.png",
+    "static/media/twitter.svg": "/mircod_service-home-page/static/media/twitter.ff7614ce.svg",
+    "static/media/youtube.svg": "/mircod_service-home-page/static/media/youtube.12245447.svg",
+    "static/media/zwave_black.svg": "/mircod_service-home-page/static/media/zwave_black.8473f7b6.svg",
+    "static/media/zwave_white.svg": "/mircod_service-home-page/static/media/zwave_white.45660838.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3d1fdce5.js",
+    "static/css/2.508070a3.chunk.css",
+    "static/js/2.8d28968e.chunk.js",
+    "static/css/main.355cce67.chunk.css",
+    "static/js/main.3c0316e8.chunk.js"
+  ]
+}
