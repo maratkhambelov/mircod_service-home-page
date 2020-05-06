@@ -4,8 +4,7 @@ import './Steps.scss';
 
 
 const Steps = (props) =>{
-    const { steps, currentStep } = props;
-    // const currentStep = (steps.find(step =>  step.status === "current" ))
+    const { steps, idxCurrentStep } = props;
     return (
         <div className="steps">
             <div className="steps_icons">
@@ -17,7 +16,7 @@ const Steps = (props) =>{
                 })}
             </div>
             <div className="steps_text">
-                <span>Complete</span> {currentStep} <span> steps of </span> {steps.length}
+                <span>Complete</span> {idxCurrentStep+1} <span> steps of </span> {steps.length}
             </div>
         </div>
     );

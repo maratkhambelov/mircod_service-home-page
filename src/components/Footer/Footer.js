@@ -7,8 +7,9 @@ import twitter from '../../assets/icons/twitter.svg';
 import mastercard from '../../assets/mastercard.png';
 import paypal from '../../assets/paypal.png';
 import visa from '../../assets/visa.png';
+import {ExpandLess} from "@material-ui/icons";
 
-const Footer = (props) => {
+const Footer = () => {
 
     const categories = [
         {id: 1, title: 'Electronics', link: '/electronics'},
@@ -72,18 +73,25 @@ const Footer = (props) => {
                     <span className="footer_social">
                             {iconsSocial.map(item=>{
                                 return(
-                                    <img src={item.src} key={item.id} alt={item.title} />
+                                    <a href="/">
+                                        <img src={item.src} key={item.id} alt={item.title} />
+                                    </a>
                                 )
                             })}
                     </span>
                     <span className="footer_quick-links">
-                        <Link  to='/blog'>
+                        <a  href="/">
                             Blog
-                        </Link>
-                        <Link to='/aboutus'>
+                        </a>
+                        <a  href="/">
                             About us
-                        </Link>
+                        </a>
                     </span>
+                </div>
+                <div className="footer_go-up"
+                onClick={()=>{window.scroll({top: 0, left: 0, behavior: 'smooth' })}}
+                >
+                    <ExpandLess/>
                 </div>
             </div>
         </div>

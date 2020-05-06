@@ -3,9 +3,10 @@ import Button  from '@material-ui/core/Button';
 import './Button.scss';
 
 function StyledButton(props) {
-    const { color, variant, label, onHandle, className} = props;
+    const { color, variant, disableButton, label, onHandle, className} = props;
+
     return (
-        <Button color={color} className={className} variant={variant} onClick={()=> onHandle()}>
+        <Button  disabled={disableButton} color={color} className={className} variant={variant} onClick={()=> onHandle()}>
             {label}
         </Button>
     );

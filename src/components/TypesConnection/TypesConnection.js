@@ -1,20 +1,21 @@
 import React, {useState} from 'react';
 import TypesConnectionItem from "./TypesConnectionItem/TypesConnectionItem";
 import './TypesConnection.scss';
-import  gratis from '../../assets/gratis.png';
-import  xbee from './xbee_black.png';
-import  mbus from '../../assets/mbus.png';
+import  zwave_black from '../../assets/zwave_black.svg';
+import  xbee from '../../assets/xbee_black.png';
+import  zwave_white from '../../assets/zwave_white.svg';
+import xbee_white from '../../assets/xbee_white.png';
 
 function TypesConnection(props) {
     const [types, setTypes] = useState([
-        {id:1, img: xbee, active: true},
-        {id:2, img: gratis, active: false},
-        {id:3, img: mbus, active: false},
-        {id:4, img: xbee, active: false},
-        {id:5, img: gratis, active: false},
-        {id:6, img: mbus, active: false},
-        {id:7, img: gratis, active: false},
-        {id:8, img: mbus, active: false},
+        {id:1, img: xbee, alt:'zwave',active: true, img_active: xbee_white},
+        {id:2, img: zwave_black,alt:'zwave', active: false, img_active: zwave_white},
+        {id:3, img: xbee, alt: 'xbee', active: false, img_active: xbee_white},
+        {id:4, img: zwave_black,alt:'zwave', active: false, img_active: zwave_white},
+        {id:5, img: xbee, alt: 'xbee', active: false, img_active: xbee_white},
+        {id:6, img: zwave_black,alt:'zwave', active: false, img_active: zwave_white},
+        {id:7, img: xbee, alt: 'xbee', active: false , img_active: xbee_white},
+        {id:8, img: zwave_black, alt:'zwave', active: false, img_active: zwave_white},
     ])
 
     const chooseType = (id) => {

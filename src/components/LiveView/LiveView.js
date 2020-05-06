@@ -1,18 +1,21 @@
 import React, {useContext} from 'react';
 import StyledButton from "../Button/Button";
-import {Context} from "../App/App";
+import {ModalOpenContext, ContentModalContext} from "../App/App";
 import product from '../../assets/product.png';
 import LiveViewProduct from "./LiveViewProduct";
 import './LiveVIew.scss';
 
 function LiveView(props) {
-    const { data, hideProduct } = props;
-    const [isOpened, setIsOpened] = useContext(Context);
-    // console.log(hideProduct)
+    const { hideProduct } = props;
+    const [isOpened, setIsOpened] = useContext(ModalOpenContext);
+    const [modalWindowContent, setModalWindowContent] = useContext(ContentModalContext);
+
     const productImage = product;
     const handleOpen = () => {
         setIsOpened(true);
+        setModalWindowContent('order-now');
     }
+
     return (
         <div className="live-view">
             <div className=" live-view_headline">

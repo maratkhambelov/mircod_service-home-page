@@ -16,7 +16,9 @@
         .MuiButton-label {
             color: #ffffff;
         }
-
+        &.Mui-disabled{
+            background-color: #cbcbcb;
+        }
     }
     &.MuiButton-outlined {
         border-color: #ffffff;
@@ -24,4 +26,5 @@
             color: #ffffff;
         }
     }
+
 }

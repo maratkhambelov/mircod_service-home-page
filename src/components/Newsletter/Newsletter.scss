@@ -1,0 +1,64 @@
+.newsletter-layout {
+  position: fixed;
+  width: 1170px;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+}
+.newsletter{
+  background-color: #f14921;
+  padding: 40px 40px 40px 50px;
+  right: 160px;
+  position: absolute;
+  width: 100%;
+  bottom: 100px;
+  max-width: 510px;
+  @media(min-width: 1920px) {
+    right: 0;
+    bottom: 370px;
+  }
+  &_title{
+    font-family: ProximaNova;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #eeeeee;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  &_input{
+    margin-bottom: 20px;
+    max-width: 420px;
+    .MuiInputBase-root.MuiInput-root {
+      background-color: #ffffff;
+      padding: 20px;
+      .newsletter_icon{
+        background-image: url("../../assets/send@3x.jpg");
+        width: 15px;
+        height: 16px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &_subtitle{
+    font-family: ProximaNova;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: #eeeeee;
+  }
+}

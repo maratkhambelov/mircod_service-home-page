@@ -1,7 +1,6 @@
 import React from 'react';
-import StyledFab from "../../StyledFab/StyledFab";
 import './Step.scss';
-import IconSimple from "../../Icon";
+import IconSimple from "../../Icon/Icon";
 
 const Step = (props) => {
     const {status} = props;

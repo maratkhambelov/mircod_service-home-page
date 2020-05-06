@@ -1,8 +1,10 @@
 .swiper-container{
-  margin: 0 35px;
 }
 .swiper-slide {
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &_icon{
     background: white;
     width: 77px;
@@ -64,15 +66,23 @@
 .swiper-button-prev,
 .swiper-button-next{
   color: #1a1b1c;
+  height: 135px;
+  background: #f6f6f6;
+  top: 0;
+  width: 75px;
+
   &:after{
     font-size: 19.5px;
   }
+  @media (min-width: 1920px) {
+    width: 79px;
+  }
 }
 .swiper-button-prev{
-
+  left: -1px;
 }
 .swiper-button-next {
-
+  right:-1px;
 }
 .swiper-button-disabled {
   color: rgba(26, 27, 28, 1);

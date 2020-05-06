@@ -3,6 +3,7 @@
   padding-top: 150px;
   padding-bottom: 90px;
   position: relative;
+
   &:after{
     content: '';
     position: absolute;
@@ -14,10 +15,30 @@
   &_inner {
     max-width: 1170px;
     margin: 0 auto;
-    //display: grid;
-    //grid-template-columns: repeat(12, 1fr);
     display: flex;
     flex-direction: column;
+    position: relative;
+    .footer_go-up{
+      position: absolute;
+      right: 8px;
+      bottom: 34px;
+      z-index: 1;
+      width: 30px;
+      height: 30px;
+      background-color: #f14921;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      &:hover{
+        cursor: pointer;
+      }
+      svg{
+        fill: #ffffff;
+      }
+      @media (min-width: 1260px) {
+        right: -30px;
+      }
+    }
   }
 
   &_main {
@@ -69,7 +90,6 @@
     }
   }
   &_additional {
-    //border-top: 1px solid #546e7a;
     padding-top: 28px;
     display: flex;
     justify-content: space-between;
@@ -83,12 +103,14 @@
       color: #90a4ae;
     }
     .footer_social {
-      img {
-        width: auto;
-      }
-      img+img{
-        margin-left: 34px;
+      a{
+        img {
+          width: auto;
+        }
 
+      }
+      a+a{
+        margin-left: 34px;
       }
     }
     .footer_quick-links {

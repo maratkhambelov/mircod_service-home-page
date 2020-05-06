@@ -1,20 +1,24 @@
 import React, {createContext, useState} from 'react';
 import './App.scss';
-import { BrowserRouter , Switch, Route  } from "react-router-dom";
+import { BrowserRouter , Switch, Route, Redirect  } from "react-router-dom";
 import Header from "../Header/Header";
 import ConstructorPage from "../Constructor/ConstructorPage";
 import Subhead from "../Subhead/Subhead";
 import ModalWindow from "../ModalWindow/ModalWindow";
 import Footer from "../Footer/Footer";
-import HelpPage from "../HelpPage/HelpPage";
 import Cover from "../Cover/Cover";
+import NullPage from "../NullPage/NullPage";
+import Newsletter from "../Newsletter/Newsletter";
 
-
-export const Context = createContext([{}, () => {}]);
-
+export const ModalOpenContext = createContext([
+    {}, () => {}
+]);
+export const ContentModalContext = createContext([
+    {}, () => {}
+]);
 function App() {
-
-    const [state, setState] = useState(false);
+    const [modalOpened, setModalOpened] = useState(false);
+    const [modalContent, setModalContent] = useState(null)
     const [links, setLinks] = useState([
         {id:1, title: 'constructor', link:'/constructor', active: true },
         {id:2, title: 'help', link:'/help', active: false },
@@ -35,32 +39,36 @@ function App() {
     }
 
     return (
-        <Context.Provider value={[state, setState]}>
-            <BrowserRouter>
-                <div className="app">
-                    <div className="app_inner">
-                        <Header/>
-                        <Subhead links={links} handleLink={handleLink}/>
-                        <Cover/>
-                        <Switch>
-                            <Route path="/constructor" component={ConstructorPage} />
-                            <Route path="/help/:stepId">
-                                <HelpPage/>
-                            </Route>
-                            {/*<Route path="/Users Panels" component={}/>*/}
-                            {/*<Route path="/FAQ"  component={}/>*/}
-                            {/*<Route path="/About"  component={}/>*/}
-                            {/*<Route path="/Blog"  component={}/>*/}
-                        </Switch>
-                        <Footer/>
+        <ModalOpenContext.Provider value={[modalOpened, setModalOpened]}>
+            <ContentModalContext.Provider value={[modalContent, setModalContent]}>
+                <BrowserRouter>
+                    <div className="app">
+                        <div className="app_inner">
+                            <Header/>
+                            <Subhead links={links} handleLink={handleLink}/>
+                            <Cover/>
+                            <Switch>
+                                <Route path={"/"} exact>
+                                    <Redirect to="/constructor" />
+                                </Route>
+                                <Route path={"/constructor"}  component={ConstructorPage} />
+                                <Route path="/help"component={NullPage}/>
+                                <Route path="/users_panel" component={NullPage}/>
+                                <Route path="/faq"  component={NullPage}/>
+                                <Route path="/about"  component={NullPage}/>
+                                <Route path="/blog"  component={NullPage}/>
+                                <Route path="*" component={NullPage}/>
+                            </Switch>
+                            <Footer/>
+                        </div>
                     </div>
-                    </div>
-
-                <ModalWindow/>
-            </BrowserRouter>
-        </Context.Provider>
-
-
+                    <Newsletter/>
+                    {modalOpened === true &&(
+                        <ModalWindow/>
+                    )}
+                </BrowserRouter>
+            </ContentModalContext.Provider>
+        </ModalOpenContext.Provider>
     );
 }
 
