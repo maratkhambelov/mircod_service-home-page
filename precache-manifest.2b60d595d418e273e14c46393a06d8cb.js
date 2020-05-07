@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "90f975b398f90d12fd00495470868dec",
+    "revision": "adb9a8d8420b1f4a04ad1c9620e1f490",
     "url": "/mircod_service-home-page/index.html"
   },
   {
-    "revision": "3d8a242fa3ecdb8f27d0",
+    "revision": "7251cbe820606815b02f",
     "url": "/mircod_service-home-page/static/css/2.508070a3.chunk.css"
   },
   {
-    "revision": "0f7f6beeaccc1624e878",
+    "revision": "12ac63d9d42fa6f118e0",
     "url": "/mircod_service-home-page/static/css/main.7b8b6c7c.chunk.css"
   },
   {
-    "revision": "3d8a242fa3ecdb8f27d0",
-    "url": "/mircod_service-home-page/static/js/2.a3300986.chunk.js"
+    "revision": "7251cbe820606815b02f",
+    "url": "/mircod_service-home-page/static/js/2.986158eb.chunk.js"
   },
   {
     "revision": "a77d181038c246f96f2f789837e5a833",
-    "url": "/mircod_service-home-page/static/js/2.a3300986.chunk.js.LICENSE.txt"
+    "url": "/mircod_service-home-page/static/js/2.986158eb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0f7f6beeaccc1624e878",
-    "url": "/mircod_service-home-page/static/js/main.e1b92fa9.chunk.js"
+    "revision": "12ac63d9d42fa6f118e0",
+    "url": "/mircod_service-home-page/static/js/main.d88137e3.chunk.js"
   },
   {
     "revision": "71ccaf6c76281c91886d",

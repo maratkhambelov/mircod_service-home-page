@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/mircod_service-home-page/static/css/main.7b8b6c7c.chunk.css",
-    "main.js": "/mircod_service-home-page/static/js/main.e1b92fa9.chunk.js",
-    "main.js.map": "/mircod_service-home-page/static/js/main.e1b92fa9.chunk.js.map",
+    "main.js": "/mircod_service-home-page/static/js/main.d88137e3.chunk.js",
+    "main.js.map": "/mircod_service-home-page/static/js/main.d88137e3.chunk.js.map",
     "runtime-main.js": "/mircod_service-home-page/static/js/runtime-main.3d1fdce5.js",
     "runtime-main.js.map": "/mircod_service-home-page/static/js/runtime-main.3d1fdce5.js.map",
     "static/css/2.508070a3.chunk.css": "/mircod_service-home-page/static/css/2.508070a3.chunk.css",
-    "static/js/2.a3300986.chunk.js": "/mircod_service-home-page/static/js/2.a3300986.chunk.js",
-    "static/js/2.a3300986.chunk.js.map": "/mircod_service-home-page/static/js/2.a3300986.chunk.js.map",
+    "static/js/2.986158eb.chunk.js": "/mircod_service-home-page/static/js/2.986158eb.chunk.js",
+    "static/js/2.986158eb.chunk.js.map": "/mircod_service-home-page/static/js/2.986158eb.chunk.js.map",
     "index.html": "/mircod_service-home-page/index.html",
-    "precache-manifest.4137cc90322e093881766b3f5e92d1d0.js": "/mircod_service-home-page/precache-manifest.4137cc90322e093881766b3f5e92d1d0.js",
+    "precache-manifest.2b60d595d418e273e14c46393a06d8cb.js": "/mircod_service-home-page/precache-manifest.2b60d595d418e273e14c46393a06d8cb.js",
     "service-worker.js": "/mircod_service-home-page/service-worker.js",
     "static/css/2.508070a3.chunk.css.map": "/mircod_service-home-page/static/css/2.508070a3.chunk.css.map",
     "static/css/main.7b8b6c7c.chunk.css.map": "/mircod_service-home-page/static/css/main.7b8b6c7c.chunk.css.map",
-    "static/js/2.a3300986.chunk.js.LICENSE.txt": "/mircod_service-home-page/static/js/2.a3300986.chunk.js.LICENSE.txt",
+    "static/js/2.986158eb.chunk.js.LICENSE.txt": "/mircod_service-home-page/static/js/2.986158eb.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/mircod_service-home-page/static/media/latoregular.1fbf86c9.woff",
     "static/media/facebook.svg": "/mircod_service-home-page/static/media/facebook.3a6d6277.svg",
     "static/media/header-logo.png": "/mircod_service-home-page/static/media/header-logo.379c0307.png",
@@ -28,8 +28,8 @@
   "entrypoints": [
     "static/js/runtime-main.3d1fdce5.js",
     "static/css/2.508070a3.chunk.css",
-    "static/js/2.a3300986.chunk.js",
+    "static/js/2.986158eb.chunk.js",
     "static/css/main.7b8b6c7c.chunk.css",
-    "static/js/main.e1b92fa9.chunk.js"
+    "static/js/main.d88137e3.chunk.js"
   ]
 }

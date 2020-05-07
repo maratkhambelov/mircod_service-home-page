@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/mircod_service-home-page/precache-manifest.4137cc90322e093881766b3f5e92d1d0.js"
+  "/mircod_service-home-page/precache-manifest.2b60d595d418e273e14c46393a06d8cb.js"
 );
 
 self.addEventListener('message', (event) => {
