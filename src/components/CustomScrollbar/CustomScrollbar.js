@@ -6,6 +6,7 @@ const CustomScrollbar = (props) => {
 
     return (
         <Scrollbar
+            disableTrackYWidthCompensation={true}
             maximalThumbYSize={20}
             trackYProps={{
                 renderer: props => {

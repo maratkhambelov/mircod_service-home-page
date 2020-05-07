@@ -14,7 +14,17 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 12px;
-
+  }
+  &_name{
+    font-family: ProximaNova;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 10px;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgba(26, 27, 28, 0.3);
   }
   &._active{
     .swiper-slide_icon{
@@ -30,39 +40,37 @@
   &:hover{
     cursor: pointer;
   }
-}
-.swiper-slide_add-custom {
-  .swiper-slide_icon {
-    border: solid 2px #f14921;
-    position: relative;
-    &:before{
-      content: '';
-      position: absolute;
-      width: 41px;
-      height: 41px;
+  &_add-custom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .swiper-slide_icon {
       border: solid 2px #f14921;
-      border-radius: 50%;
-      box-sizing: border-box;
+      position: relative;
+      &:before{
+        content: '';
+        position: absolute;
+        width: 41px;
+        height: 41px;
+        border: solid 2px #f14921;
+        border-radius: 50%;
+        box-sizing: border-box;
+      }
+
+      svg{
+        fill: #f14921;
+      }
     }
-    svg{
-      fill: #f14921;
+    .swiper-slide_name{
+      color: #2a2a2b;
+    }
+    &:hover{
+      cursor: pointer;
     }
   }
-  &:hover{
-    cursor: pointer;
-  }
 }
-.swiper-slide_name{
-  font-family: ProximaNova;
-  font-size: 12px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 0.83;
-  letter-spacing: normal;
-  text-align: center;
-  color: rgba(26, 27, 28, 0.3);
-}
+
+
 .swiper-button-prev,
 .swiper-button-next{
   color: #1a1b1c;
@@ -70,20 +78,46 @@
   background: #f6f6f6;
   top: 0;
   width: 75px;
-
   &:after{
     font-size: 19.5px;
   }
+
   @media (min-width: 1920px) {
     width: 79px;
+    top: -10px;
+    height: 145px;
   }
 }
 .swiper-button-prev{
   left: -1px;
+  @media (min-width: 1280px) {
+    width: 86px;
+  }
 }
 .swiper-button-next {
   right:-1px;
+  width: 180px;
+  justify-content: flex-end;
+  padding-right: 30px;
+  @media (min-width: 1280px) {
+    width: 194px;
+  }
+  @media (min-width: 1920px) {
+    width: 170px;
+
+  }
+
 }
 .swiper-button-disabled {
   color: rgba(26, 27, 28, 1);
+}
+
+.slide_out-flow{
+  width: 61.9091px;
+  margin-right: 15px;
+  position: absolute;
+  right: 80px;
+  top: 61px;
+  z-index: 1;
+  height: 107px;
 }

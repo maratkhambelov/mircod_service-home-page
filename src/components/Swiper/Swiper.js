@@ -28,18 +28,20 @@ const StyledSwiper = (props) => {
         }
     }
     return(
-        <Swiper {...params}>
-            {data.map(item => {
-                return(
-                    <Slide onChoose={chooseItem} key={item.id} {...item} >
-                        <IconSimple d={item.icon.d} fill={item.icon.fill} viewBox={item.icon.viewBox} height={item.icon.height} width={item.icon.width} />
-                    </Slide>
+        <>
+            <Swiper {...params}>
+                {data.map(item => {
+                    return(
+                        <Slide onChoose={chooseItem} key={item.id} {...item} >
+                            <IconSimple d={item.icon.d} fill={item.icon.fill} viewBox={item.icon.viewBox} height={item.icon.height} width={item.icon.width} />
+                        </Slide>
                     )
-            })}
-
+                })}
+            </Swiper>
             <SlideAddCustom/>
-        </Swiper>
+        </>
     )
+
 }
 
 export default StyledSwiper;

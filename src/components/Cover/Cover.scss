@@ -18,10 +18,13 @@
     position: absolute;
     top:0;
     right:0;
+
     //background-repeat: no-repeat;
     //background-size: cover;
-    background-size: contain;
+    //background-size: contain;
     background-repeat: repeat;
+    background-size: 100% 16%;
+
   }
   &_inner{
     margin: 0 auto;

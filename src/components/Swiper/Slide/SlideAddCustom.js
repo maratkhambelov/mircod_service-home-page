@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import {ContentModalContext, ModalOpenContext} from "../../App/App";
 import { Add} from "@material-ui/icons";
+import '../Swiper.scss';
 
 const SlideAddCustom = () => {
     const [isOpened, setIsOpened] = useContext(ModalOpenContext);
@@ -12,7 +13,7 @@ const SlideAddCustom = () => {
     }
 
     return (
-        <div className='swiper-slide_add-custom'
+        <div className='slide_out-flow swiper-slide_add-custom'
         onClick={() => {handleOpen('add-custom') }}>
             <div className="swiper-slide_icon">
                 <Add/>

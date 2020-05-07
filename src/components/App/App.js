@@ -1,6 +1,6 @@
 import React, {createContext, useState} from 'react';
 import './App.scss';
-import { BrowserRouter , Switch, Route, Redirect  } from "react-router-dom";
+import { HashRouter , Switch, Route, Redirect  } from "react-router-dom";
 import Header from "../Header/Header";
 import ConstructorPage from "../Constructor/ConstructorPage";
 import Subhead from "../Subhead/Subhead";
@@ -16,6 +16,7 @@ export const ModalOpenContext = createContext([
 export const ContentModalContext = createContext([
     {}, () => {}
 ]);
+
 function App() {
     const [modalOpened, setModalOpened] = useState(false);
     const [modalContent, setModalContent] = useState(null)
@@ -41,7 +42,7 @@ function App() {
     return (
         <ModalOpenContext.Provider value={[modalOpened, setModalOpened]}>
             <ContentModalContext.Provider value={[modalContent, setModalContent]}>
-                <BrowserRouter>
+                <HashRouter basename="/">
                     <div className="app">
                         <div className="app_inner">
                             <Header/>
@@ -66,7 +67,7 @@ function App() {
                     {modalOpened === true &&(
                         <ModalWindow/>
                     )}
-                </BrowserRouter>
+                </HashRouter>
             </ContentModalContext.Provider>
         </ModalOpenContext.Provider>
     );
