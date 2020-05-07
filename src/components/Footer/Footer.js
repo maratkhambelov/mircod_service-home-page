@@ -9,8 +9,16 @@ import paypal from '../../assets/paypal.png';
 import visa from '../../assets/visa.png';
 import {ExpandLess} from "@material-ui/icons";
 
-const Footer = () => {
-
+const Footer = (props) => {
+    const {handleLink} = props;
+    const innerLinks = [
+        {id:5, title: 'About', link:'/about' },
+        {id:6, title: 'Blog', link:'/blog' }
+        ];
+    const clickLink = (id) => {
+        handleLink(id);
+        window.scrollTo({top: 0, left:0, behavior: "auto"})
+    }
     const categories = [
         {id: 1, title: 'Electronics', link: '/electronics'},
         {id: 2, title: 'Home & Tools', link: '/hometools'},
@@ -18,9 +26,9 @@ const Footer = () => {
         {id: 4, title: 'Toys & Kids', link: '/toyskids'},
     ];
     const iconsSocial = [
-        {id: 1, title: 'youtube', src: youtube},
-        {id: 2, title: 'facebook', src: facebook},
-        {id: 3, title: 'twitter', src: twitter},
+        {id: 1, title: 'youtube', link: 'https://www.youtube.com/', src: youtube},
+        {id: 2, title: 'facebook', link: 'https://www.facebook.com/', src: facebook},
+        {id: 3, title: 'twitter', link: 'https://twitter.com/', src: twitter},
     ];
     const iconsPayment = [
         {id: 1, title: 'mastercard', src: mastercard},
@@ -73,19 +81,28 @@ const Footer = () => {
                     <span className="footer_social">
                             {iconsSocial.map(item=>{
                                 return(
-                                    <a href="/">
+                                    <a href={item.link}>
                                         <img src={item.src} key={item.id} alt={item.title} />
                                     </a>
                                 )
                             })}
                     </span>
                     <span className="footer_quick-links">
-                        <a  href="/">
-                            Blog
-                        </a>
-                        <a  href="/">
-                            About us
-                        </a>
+                        {/*handleLink*/}
+                        {innerLinks.map(item => (
+                            <Link to={item.link}
+                                  key={item.id}
+                                  onClick={() => {clickLink(item.id)}}
+                            >
+                                {item.title}
+                            </Link>
+                        ))}
+                        {/*<a  href="#">*/}
+                        {/*    Blog*/}
+                        {/*</a>*/}
+                        {/*<a  href="#">*/}
+                        {/*    About us*/}
+                        {/*</a>*/}
                     </span>
                 </div>
                 <div className="footer_go-up"

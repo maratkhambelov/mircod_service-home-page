@@ -28,6 +28,7 @@ function App() {
         {id:5, title: 'about', link:'/about', active: false },
         {id:6, title: 'blog', link:'/blog', active: false },
     ])
+
     const handleLink = (id) => {
         const idxActiveLink = links.indexOf(links.find(item => item.active === true));
         setLinks(links[idxActiveLink].active = false);
@@ -60,7 +61,7 @@ function App() {
                                 <Route path="/blog"  component={NullPage}/>
                                 <Route path="*" component={NullPage}/>
                             </Switch>
-                            <Footer/>
+                            <Footer handleLink={handleLink}/>
                         </div>
                     </div>
                     <Newsletter/>
